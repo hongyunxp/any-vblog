@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="show_pic_on">列表浏览时显示缩略图</string>
+    <string name="show_pic_off">列表浏览时不显示缩略图</string>
+    <string name="show_pic">show_pic</string>
+    <string name="auto_update">auto_update</string>
+    <string name="auto_update_on">开启自动检查更新</string>
+    <string name="auto_update_off">关闭自动检查更新</string>
+
+    
+</resources>

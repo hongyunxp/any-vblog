@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFFFF" >
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:background="@drawable/title_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_refresh" />
+
+        <Button
+            android:id="@+id/write"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_write"
+            android:gravity="center" />
+
+
+
+
+        <TextView
+            android:id="@+id/account_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/write"
+            android:layout_toRightOf="@+id/refresh"
+            android:background="@drawable/title_bg"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:text="用户昵称"
+            android:textColor="#FFFFFF" />
+
+    </RelativeLayout>
+
+
+    <com.debugi.app.anyvblog.widget.CustomListView
+        android:id="@+id/home_timeline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/top"
+        android:background="@drawable/white_bg"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/list_divider"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent" >
+
+        <!-- Preview: listitem=@layout/list_item -->
+    </com.debugi.app.anyvblog.widget.CustomListView>
+
+    <FrameLayout
+        android:id="@+id/f_back_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom"
+        android:layout_alignParentRight="true"
+        android:background="#00FFFFFF" >
+
+	    <Button
+	        android:id="@+id/back_top"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="2dp"
+	        android:background="@drawable/back_top" />
+
+	</FrameLayout>
+    <!-- 底部导航 -->
+    <FrameLayout
+        android:id="@+id/bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/bottom_bg_1" >
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center" >
+
+
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/showone_back_selector"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/btn_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/showone_home_selector" />
+        </RelativeLayout>
+    </FrameLayout>
+	<LinearLayout
+        android:id="@+id/progressbar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="45dp"
+        android:layout_marginTop="45dp"
+        android:background="#11FFFFFF"
+        android:gravity="center" >
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加载中……"
+            android:textColor="#000000"
+            android:textSize="18dip" />
+    </LinearLayout>
+
+
+</RelativeLayout>

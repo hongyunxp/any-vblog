@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:descendantFocusability="blocksDescendants" >
+
+    <ImageView
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:maxHeight="32px"
+        android:maxWidth="32px"
+        android:padding="2dp"
+        android:src="@drawable/tencent_icon_32" />
+
+    <ImageView
+        android:id="@+id/vip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/head"
+        android:src="@drawable/vip_icon" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/vip"
+        android:text="name"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#221177"
+        android:textSize="16dip" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/head"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/name"
+        android:layout_toLeftOf="@+id/head"
+        android:background="@drawable/directmessage_sent_bg"
+        android:text="这里显示微博内容"
+        android:textSize="16dip" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/status"
+        android:layout_alignLeft="@+id/status"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:text="13:00"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#555555"
+        android:textSize="12dip" />
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_below="@+id/head"
+        android:background="@drawable/type_bg"
+        android:gravity="center"
+        android:text="私信"
+        android:textColor="#EEEEEE"
+        android:textSize="9dip" />
+
+</RelativeLayout>

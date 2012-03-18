@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFFFF"
+    android:orientation="vertical" >
+
+    <ViewFlipper
+        android:id="@+id/flipper_public"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:longClickable="true" >
+
+        <LinearLayout
+            android:id="@+id/l_searchbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/mentions_type_title_bg"
+                android:gravity="center_vertical" >
+
+                <RadioGroup
+                    android:id="@+id/search_types"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="80dp"
+                    android:background="@drawable/mentions_type_btn_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/search_status"
+                        style="@style/mentions_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:checked="true"
+                        android:text="微博" />
+
+                    <RadioButton
+                        android:id="@+id/search_user"
+                        style="@style/mentions_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:text="用户" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/search_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/search_key"
+                    android:layout_width="254dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.18"
+                    android:background="@drawable/search_keyword"
+                    android:hint="输入关键字" />
+
+                <Button
+                    android:id="@+id/search_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:background="@drawable/search_submit" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/progressbar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="45dp"
+                android:layout_marginTop="45dp"
+                android:background="#11FFFFFF"
+                android:gravity="center"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/l_progressbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="45dp"
+                    android:layout_marginTop="45dp"
+                    android:background="#11FFFFFF"
+                    android:gravity="center" >
+
+                    <ProgressBar
+                        android:id="@+id/progressBar1"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="加载中……"
+                        android:textColor="#000000"
+                        android:textSize="18dip" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <ListView
+                android:id="@+id/search_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/white_bg"
+                android:cacheColorHint="#00000000"
+                android:divider="@drawable/list_divider"
+                android:fadingEdge="none"
+                android:listSelector="@android:color/transparent"
+                android:visibility="gone" >
+
+                <!-- Preview: listitem=@layout/list_item -->
+            </ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <GridView
+                android:id="@+id/grid_public"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadingEdge="none"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="3" >
+            </GridView>
+        </LinearLayout>
+    </ViewFlipper>
+
+</RelativeLayout>

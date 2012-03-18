@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/write_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/write_bg" >
+
+        <Button
+            android:id="@+id/write_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/button_cancel"
+            android:text="取消" />
+
+        <Button
+            android:id="@+id/write_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/button_send"
+            android:text="发送" />
+
+        <TextView
+            android:id="@+id/write_top_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="说说新鲜事"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/write_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/write_bottom_bg" >
+
+        <LinearLayout
+            android:id="@+id/bottom_btns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/write_pic"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button_write_pic" />
+
+            <Button
+                android:id="@+id/write_at"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_write_at" />
+
+            <Button
+                android:id="@+id/write_topic"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_write_topic" />
+
+            <Button
+                android:id="@+id/write_emo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_write_emo" />
+
+            <Button
+                android:id="@+id/write_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_write_location" />
+
+            <Button
+                android:id="@+id/write_account"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_write_account" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/write_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tips"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/write_top"
+        android:background="@drawable/edit_bg"
+        android:cursorVisible="true"
+        android:editable="true"
+        android:gravity="top"
+        android:hint="在这里输入内容……"
+        android:inputType="textMultiLine"
+        android:textColor="#000000" />
+
+    <RelativeLayout
+        android:id="@+id/tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/write_bottom" >
+
+        <ImageView
+            android:id="@+id/write_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/location" />
+
+        <TextView
+            android:id="@+id/write_location_tips"
+            android:layout_width="150px"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/write_location"
+            android:layout_toRightOf="@+id/write_location"
+            android:ellipsize="start"
+            android:singleLine="true"
+            android:text="你还没有定位" />
+
+        <TextView
+            android:id="@+id/write_status_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="2dp"
+            android:padding="0dp"
+            android:text="140" />
+
+        <TextView
+            android:id="@+id/write_account_send_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="已选择一个账户" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/emotions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/write_bottom"
+        android:background="#456789"
+        android:visibility="gone" >
+
+            <GridView
+                android:id="@+id/grid_emotions"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="6"
+                android:background="#FFFFFF"
+                android:verticalSpacing="12dp" >
+
+                <!-- Preview: listitem=@layout/face_item -->
+            </GridView>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/topics"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/write_bottom"
+        android:background="#123456"
+        android:visibility="gone" >
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/ats"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/write_bottom"
+        android:background="#987654"
+        android:visibility="gone" >
+    </FrameLayout>
+
+</RelativeLayout>
