@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/mentions_type_title_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/directmessages_types"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:background="@drawable/mentions_type_btn_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+            
+
+            <RadioButton
+                android:id="@+id/directmessages_type_recv"
+                style="@style/mentions_type"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:checked="true"
+                android:text="收件箱" />
+
+            <RadioButton
+                android:id="@+id/directmessages_type_sent"
+                style="@style/mentions_type"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="发件箱" />
+        </RadioGroup>
+
+
+
+
+
+
+        <Button
+            android:id="@+id/directmessages_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/directmessage_edit_bg"
+            android:text="写私信" />
+
+    </RelativeLayout>
+
+
+    <com.debugi.app.anyvblog.widget.CustomListView
+        android:id="@+id/directmessages_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout1"
+        android:divider="@drawable/list_divider"
+        android:cacheColorHint="#00000000"
+        android:listSelector="@android:color/transparent"
+        android:background="#FFFFFF"
+        android:fadingEdge="none" />
+
+</RelativeLayout>

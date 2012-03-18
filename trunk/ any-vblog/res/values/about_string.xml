@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">    此版本适用于Android2.2及以上固件，如果在其他的手机系统上使用本软件，对于出现的任何问题，不承担任何责任。本软件的下载、安装完全免费，使用过程中产生的数据流量费用，由运营商收取。</string>
+    <string name="web_url">网址:http://debugi.com</string>
+    <string name="last_update">本次更新：2012年3月8日</string>
+    <string name="app_name_about">Any微博（Android）</string>
+    <string name="web_email">意见及建议：zhaoyong1990@gmail.com</string>
+    <string name="curDesc">基于v1.0.1版本修正：1、修复新浪用户收听与取消收听无响应的bug;2、修复自动检查更新开启时，手动点击检查无提示的bug</string>
+
+    
+</resources>

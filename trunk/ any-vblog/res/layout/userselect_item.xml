@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:descendantFocusability="blocksDescendants" >
+
+    <ImageView
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:maxHeight="32px"
+        android:maxWidth="32px"
+        android:padding="2dp"
+        android:src="@drawable/tencent_icon_32" />
+
+    <TextView
+        android:id="@+id/userselect_nick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/head"
+        android:textColor="#000000"
+        android:text="昵称" />
+
+    <TextView
+        android:id="@+id/userselect_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/userselect_nick"
+        android:layout_below="@+id/userselect_nick"
+        android:text="用户名"
+        android:textColor="#000000"
+        android:textSize="10dip" />
+
+    <ImageView
+        android:id="@+id/isvip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/userselect_nick"
+        android:layout_toRightOf="@+id/userselect_name"
+        android:src="@drawable/vip_icon" />
+
+</RelativeLayout>

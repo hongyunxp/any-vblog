@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/userselect_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bg"
+        android:gravity="center"
+        android:text="选择用户"
+        android:textColor="#FFFFFF"
+        android:textSize="16dip" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/searchbar_bkg" >
+
+        <AutoCompleteTextView
+            android:id="@+id/search_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.47"
+            android:background="@drawable/search_keyword"
+            android:completionHint="互听列表"
+            android:completionThreshold="1"
+            android:dropDownVerticalOffset="5dp"
+            android:singleLine="true"
+            android:text="" >
+
+            <requestFocus />
+        </AutoCompleteTextView>
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/searchbar_cancel_selector"
+            android:text="搜索" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/userlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/white_bg"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/list_divider"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent" >
+        <!-- Preview: listitem=@layout/userselect_item -->
+    </ListView>
+
+</LinearLayout>

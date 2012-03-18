@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <string name="header_release_to_refresh">松开刷新</string>
+    <string name="header_last_update">最近更新:</string>
+    <string name="header_pull_to_refresh"> 下拉刷新</string>
+    <string name="header_refreshing">正在刷新……</string>
+    <string name="footer_loading_tips">正在载入数据……</string>
+    <string name="footer_normal_tips">查看更多</string>
+    <string name="footer_no_more_data">没有更多数据了！</string>
+    
+</resources>
