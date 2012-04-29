@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ilovn.app.anyvblog"
+    android:versionCode="5"
+    android:versionName="1.1.1" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.debugi.app.anyvblog" >
+    </instrumentation>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name="com.ilovn.app.anyvblog.application.CrashApplication"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name=".LoadingActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".OAuthActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="callback"
+                    android:scheme="anyweibo-oauth" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BrowserActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="InputVerifierAcitivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="HomeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="ShowOneDataActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name="WriteActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="MentionsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="ImageActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="DirectMessagesActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="UserSelectActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="WriteDirectMessageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="ForwardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="CommentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="UserInfoActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="User_TimelineActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="AboutActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="SettingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="InfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="PublicActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="FollowersActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="FriendsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="UpdateDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/dialog" >
+        </activity>
+        <activity
+            android:name="UpdatedInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/dialog" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/spinner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/title_bg"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal" >
+<!-- android:descendantFocusability="blocksDescendants"处理自定义列表时当作块处理 -->
+    <ImageView
+        android:id="@+id/account_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:maxHeight="32px"
+        android:maxWidth="32px"
+        android:padding="4dp"
+        android:src="@drawable/tencent_icon_32"/>
+
+    <TextView
+        android:id="@+id/account_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_toLeftOf="@+id/write_account_check"
+        android:layout_toRightOf="@+id/account_icon"
+        android:gravity="center"
+        android:text="腾讯微博"
+        android:textColor="#FFFFFF"
+        android:textSize="16dip" />
+
+    <CheckBox
+        android:id="@+id/write_account_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/account_icon"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        style="@android:style/Widget.CompoundButton.CheckBox"
+        android:gravity="center"
+        android:maxHeight="32px"
+        android:maxWidth="32px"
+        android:textColor="#000000" />
+
+</RelativeLayout>
