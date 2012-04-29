@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MainActivity!</string>
+    <string name="app_name">Any微博</string>
+    <string name="getRequestToken">获取未授权的requestToken</string>
+    <string name="startOauth">点击开始授权</string>
+    <string name="oauth_tip">请选择需要授权的服务商</string>
+    <string name="acounts_tip">请选择要显示的账户</string>
+	<string name="pull_to_refresh_pull_label">下拉刷新...</string>
+    <string name="pull_to_refresh_release_label">释放刷新...</string>
+    <string name="pull_to_refresh_refreshing_label">载入中...</string>
+    <string name="pull_to_refresh_tap_label">点击刷新...</string>
+    <string name="main_home">主页</string>
+    <string name="main_mentions">提及</string>
+    <string name="main_private">私信</string>
+    <string name="main_public">广场</string>
+    <string name="main_more">更多</string>    
+</resources>

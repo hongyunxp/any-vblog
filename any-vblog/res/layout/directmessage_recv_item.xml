@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:descendantFocusability="blocksDescendants" >
+
+    <ImageView
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:maxHeight="32px"
+        android:maxWidth="32px"
+        android:padding="2dp"
+        android:src="@drawable/tencent_icon_32" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/head"
+        android:text="name"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#221177"
+        android:textSize="16dip" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/name"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dip"
+        android:text="13:00"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#555555"
+        android:textSize="12dip" />
+
+    <ImageView
+        android:id="@+id/vip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dip"
+        android:layout_toRightOf="@+id/name"
+        android:src="@drawable/vip_icon" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/name"
+        android:background="@drawable/directmessage_recv_bg"
+        android:text="这里显示微博内容"
+        android:textSize="16dip" />
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/name"
+        android:layout_toRightOf="@+id/vip"
+        android:background="@drawable/type_bg"
+        android:gravity="center"
+        android:textColor="#EEEEEE"
+        android:text="私信"
+        android:textSize="9dip" />
+
+</RelativeLayout>

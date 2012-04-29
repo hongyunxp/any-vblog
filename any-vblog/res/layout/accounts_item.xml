@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/spinner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="#00FFFFFF"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true" >
+
+        <ImageView
+            android:id="@+id/account_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:maxHeight="32px"
+            android:maxWidth="32px"
+            android:src="@drawable/tencent_icon_32" />
+
+        <TextView
+            android:id="@+id/account_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:text="腾讯微博"
+            android:textColor="#000000"
+            android:textSize="16dip" />
+
+    </LinearLayout>
+
+	<Button
+	    android:id="@+id/account_del"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:background="@drawable/btn_selector"
+	    android:text="删除" />
+
+</RelativeLayout>

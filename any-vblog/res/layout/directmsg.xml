@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.ilovn.app.anyvblog"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <com.ilovn.app.anyvblog.widget.TitleFlowIndicator
+            android:id="@+id/viewflowindic"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            app:clipPadding="5dp"
+            app:customTypeface="fonts/Antic.ttf"
+            app:footerColor="@color/mylightgreen"
+            app:footerLineHeight="2dp"
+            app:footerTriangleHeight="10dp"
+            app:selectedColor="@color/aqua"
+            app:selectedSize="12dp"
+            app:textColor="#FF000000"
+            app:textSize="11dp"
+            app:titlePadding="10dp" >
+        </com.ilovn.app.anyvblog.widget.TitleFlowIndicator>
+    </LinearLayout>
+
+    <com.ilovn.app.anyvblog.widget.ViewFlow
+        android:id="@+id/viewflow"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header_layout"
+        android:duplicateParentState="true" >
+    </com.ilovn.app.anyvblog.widget.ViewFlow>
+
+    <FrameLayout
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/footer_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/toast_border"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/loading_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/footer_loading_tips" />
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>
